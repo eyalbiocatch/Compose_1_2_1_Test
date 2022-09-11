@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Compose 1.2.1 Test</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="biobank_login">Welcome to Sample Bank Login</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="simulation_string">Simulating authentication with server…</string>
+    <string name="login_authenticated">User authenticated - move on to next screen</string>
+    <string name="logout_question">This will log you out of the system. \n Are you sure?</string>
+    <string name="yes_i_m_sure">Yes, I\'m sure.</string>
+    <string name="nope_stay">Nope, stay.</string>
+    <string name="timed_out_text">Due to inactivity you have been \n logged out of the system</string>
+    <string name="exit">Exit</string>
+    <string name="sdk_description_login_page">In a login page like this, the SDK should already be in\nthe STARTED state and with a unique CSID.\n\nThis guarantee that the SDK can analyze input during the login phase.</string>
+    <string name="configuration">Configuration</string>
+    <string name="timeout_value_in_seconds">Timeout value in seconds</string>
+    <string name="save">Save</string>
+    <string name="wups_server_url">Wups Server URL</string>
+    <string name="sd_server_url">SD Server URL</string>
+    <string name="saving_will_restart_the_app_and_load_nthe_configuration_changes">Saving will restart the app and load\nthe configuration changes. No need to relaunch the app manually.</string>
+    <string name="biocatch_sdk">BioCatch SDK:</string>
+    <string name="welcome_to_payments_screen">Welcome to payments screen</string>
+    <string name="to">To:</string>
+    <string name="_1_999_999999">+1 999 999999</string>
+    <string name="amount">Amount:</string>
+    <string name="_1000">$1000</string>
+    <string name="send_amount">Send Amount</string>
+    <string name="customer_id">Customer Id</string>
+</resources>

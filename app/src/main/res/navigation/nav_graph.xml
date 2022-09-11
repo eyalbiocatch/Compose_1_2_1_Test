@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <action
+        android:id="@+id/global_action_to_login"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment" />
+
+    <action
+        android:id="@+id/global_action_to_timeout"
+        app:destination="@id/fragmentDialogTimedOut" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.biocatch.compose1_2_1test.login.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/to_dashboard"
+            app:destination="@id/fragmentUserDashboard" />
+        <argument
+            android:name="fromLogOut"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+        <action
+            android:id="@+id/toConfigurations"
+            app:destination="@id/fragmentConfigurations"
+            app:popUpTo="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUserDashboard"
+        android:name="com.biocatch.compose1_2_1test.dashboard.FragmentUserDashboard"
+        android:label="fragment_user_dashboard"
+        tools:layout="@layout/fragment_user_dashboard">
+        <action
+            android:id="@+id/to_logout"
+            app:destination="@id/fragmentDialogLogOut"
+            app:popUpTo="@id/fragmentDialogLogOut"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/toPayments"
+            app:destination="@id/fragmentPayments"
+            app:popUpTo="@id/fragmentUserDashboard"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/fragmentDialogLogOut"
+        android:name="com.biocatch.compose1_2_1test.login.FragmentDialogLogOut"
+        android:label="fragment_dialog_log_out"
+        tools:layout="@layout/fragment_dialog_log_out">
+
+    </dialog>
+    <dialog
+        android:id="@+id/fragmentDialogTimedOut"
+        android:name="com.biocatch.compose1_2_1test.login.FragmentDialogTimedOut"
+        android:label="fragment_timed_out_dialog"
+        tools:layout="@layout/fragment_timed_out_dialog">
+
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentPayments"
+        android:name="com.biocatch.compose1_2_1test.payments.FragmentPayments"
+        android:label="fragment_payments"
+        tools:layout="@layout/fragment_payments">
+
+        <action
+            android:id="@+id/to_dashboard"
+            app:destination="@id/fragmentUserDashboard"
+            app:popUpTo="@id/fragmentPayments"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConfigurations"
+        android:name="com.biocatch.compose1_2_1test.configurations.FragmentConfigurations"
+        android:label="fragment_configurations"
+        tools:layout="@layout/fragment_configurations" />
+</navigation>

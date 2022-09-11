@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".dashboard.FragmentUserDashboard">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="24dp"
+            android:text="Welcome to your Dashboard"
+            android:textColor="@android:color/black"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/paymentsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorPrimary"
+            android:text="Payments"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/signOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentsBtn"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorPrimary"
+            android:text="Sign Out"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</layout>
